@@ -1,0 +1,120 @@
+@Metadata.layer: #CORE
+
+@UI: {
+  headerInfo: {
+    typeName: 'Service Request',
+    typeNamePlural: 'Service Requests',
+    title: {
+      type: #STANDARD,
+      value: 'Title'
+    }
+  }
+}
+
+annotate view ZSS_C_SERVICEREQUEST with
+{
+
+  @UI.facet: [
+    {
+      id: 'GeneralInfo',
+      type: #IDENTIFICATION_REFERENCE,
+      label: 'General Information',
+      position: 10
+    }
+  ]
+
+@UI.lineItem: [
+  { position: 10, label: 'Title' }
+]
+@UI.identification: [
+  {
+    position: 10,
+    label: 'Title'
+  },
+  {
+    type: #FOR_ACTION,
+    dataAction: 'resolveRequest',
+    label: 'Resolve Request',
+    position: 20
+  },
+  {
+    type: #FOR_ACTION,
+    dataAction: 'escalateRequest',
+    label: 'Escalate Request',
+    position: 30
+  },
+  {
+  type: #FOR_ACTION,
+  dataAction: 'assignTechnician',
+  label: 'Assign Technician',
+  position: 40
+}
+]
+Title;
+
+  @UI.identification: [{ position: 20, label: 'Description' }]
+  Description;
+
+  @UI.lineItem: [{ position: 50, label: 'Requester' }]
+  @UI.identification: [{ position: 30, label: 'Requester' }]
+  Requester;
+
+  @UI.lineItem: [{ position: 40, label: 'Category' }]
+  @UI.selectionField: [{ position: 30 }]
+  @UI.identification: [{ position: 40, label: 'Category' }]
+  Category;
+
+ @UI.lineItem: [
+  {
+    position: 30,
+    label: 'Priority',
+    criticality: 'PriorityCriticality'
+  }
+]
+@UI.selectionField: [{ position: 20 }]
+@UI.identification: [
+  {
+    position: 50,
+    label: 'Priority',
+    criticality: 'PriorityCriticality'
+  }
+]
+Priority;
+
+  @UI.lineItem: [
+  {
+    position: 20,
+    label: 'Status',
+    criticality: 'StatusCriticality'
+  }
+]
+@UI.selectionField: [{ position: 10 }]
+@UI.identification: [
+  {
+    position: 60,
+    label: 'Status',
+    criticality: 'StatusCriticality'
+  }
+]
+Status;
+
+  @UI.identification: [{ position: 70, label: 'Department' }]
+  Department;
+
+  @UI.lineItem: [{ position: 60, label: 'Assigned To' }]
+  @UI.identification: [{ position: 80, label: 'Assigned To' }]
+  AssignedTo;
+
+  @UI.lineItem: [{ position: 70, label: 'Created On' }]
+  @UI.identification: [{ position: 90, label: 'Created On' }]
+  CreatedAt;
+
+  @UI.identification: [{ position: 100, label: 'SLA Deadline' }]
+  DueAt;
+
+  @UI.identification: [{ position: 110, label: 'Resolution Note' }]
+  ResolutionNote;
+  
+  
+
+}

@@ -1,0 +1,63 @@
+managed implementation in class zbp_ss_i_servicerequest unique;
+strict ( 2 );
+with draft;
+
+define behavior for ZSS_I_SERVICEREQUEST
+persistent table zss_srvreq
+draft table zss_srvreq_d
+lock master
+total etag LastChangedAt
+authorization master ( none )
+etag master LocalLastChangedAt
+{
+  create;
+  update;
+  delete;
+
+  draft action Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare
+{
+  validation ( always ) validatePriority;
+}
+  action ( features : instance ) resolveRequest result [1] $self;
+  action ( features : instance ) escalateRequest result [1] $self;
+  action ( features : instance ) assignTechnician
+  parameter ZSS_A_ASSIGNTECH
+  result [1] $self;
+  determination setInitialValues on modify { create; }
+  determination calculateSLA on modify { field Priority; }
+validation validatePriority on save
+{
+  create;
+  update;
+  field Priority;
+}
+  field ( readonly, numbering : managed ) RequestId;
+
+  field ( readonly ) CreatedAt, ResolvedAt,
+                     LastChangedAt, LocalLastChangedAt;
+
+  field ( mandatory ) Title, Requester, Category;
+
+  mapping for zss_srvreq
+  {
+    RequestId          = request_id;
+    Title              = title;
+    Description        = description;
+    Requester          = requester;
+    Department         = department;
+    Category           = category;
+    Priority           = priority;
+    Status             = status;
+    AssignedTo         = assigned_to;
+    CreatedAt          = created_at;
+    DueAt              = due_at;
+    ResolvedAt         = resolved_at;
+    ResolutionNote     = resolution_note;
+    LastChangedAt      = last_changed_at;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+}

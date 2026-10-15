@@ -1,0 +1,8 @@
+@EndUserText.label: 'Smart Service Management'
+define service ZSS_SD_SERVICEREQUEST {
+  expose ZSS_C_SERVICEREQUEST as ServiceRequest;
+  expose ZSS_I_PRIORITY       as PriorityValueHelp;
+  expose ZSS_I_CATEGORY       as CategoryValueHelp;
+  expose ZSS_I_TECHNICIAN     as TechnicianValueHelp;
+  expose ZSS_C_ANALYTICS      as RequestAnalytics;
+}
