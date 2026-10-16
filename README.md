@@ -17,6 +17,12 @@ Das Projekt ist als persönliches Lern- und Portfolio-Projekt entstanden, um mod
 
 ![Assign Technician](docs/screenshots/assign-technician.JPG)
 
+### Validierung
+
+Ungültige Prioritäten werden durch eine RAP-Validierung im Backend abgefangen und direkt in Fiori als Fehlermeldung angezeigt.
+
+![Priority Validation](docs/screenshots/Validation.JPG)
+
 ## Überblick
 
 Ein Mitarbeiter kann beispielsweise einen Service Request wie
