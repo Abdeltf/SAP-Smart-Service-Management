@@ -29,6 +29,12 @@ Für eine einfache Auswertung der Service Requests gibt es eine analytische CDS-
 
 ![Service Request Analytics](docs/screenshots/analytics.JPG)
 
+### Gelöster Service Request
+
+Nach der Bearbeitung kann ein Request mit einer Lösungsnotiz abgeschlossen werden. Dabei werden der Status auf `RESOLVED` gesetzt und der Lösungszeitpunkt gespeichert.
+
+![Resolved Service Request](docs/screenshots/resolved-request.PNG)
+
 ## Überblick
 
 Ein Mitarbeiter kann beispielsweise einen Service Request wie
