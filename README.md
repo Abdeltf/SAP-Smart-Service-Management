@@ -6,6 +6,10 @@ Die Anwendung bildet einen einfachen internen IT-Support-Prozess ab. Service Req
 
 Das Projekt ist als persönliches Lern- und Portfolio-Projekt entstanden, um moderne SAP-Entwicklung praktisch umzusetzen und die einzelnen RAP-Schichten besser zu verstehen.
 
+## Vorschau
+
+![SAP Smart Service Management – Fiori Übersicht](docs/screenshots/service-request-list.JPG)
+
 ---
 
 ## Überblick
