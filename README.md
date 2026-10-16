@@ -23,6 +23,12 @@ Ungültige Prioritäten werden durch eine RAP-Validierung im Backend abgefangen 
 
 ![Priority Validation](docs/screenshots/Validation.JPG)
 
+### Analytics
+
+Für eine einfache Auswertung der Service Requests gibt es eine analytische CDS-Schicht mit Auswertung nach Status, Priorität und Kategorie.
+
+![Service Request Analytics](docs/screenshots/analytics.JPG)
+
 ## Überblick
 
 Ein Mitarbeiter kann beispielsweise einen Service Request wie
