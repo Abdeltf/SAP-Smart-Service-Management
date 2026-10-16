@@ -11,6 +11,11 @@ Das Projekt ist als persönliches Lern- und Portfolio-Projekt entstanden, um mod
 ![SAP Smart Service Management – Fiori Übersicht](docs/screenshots/service-request-list.JPG)
 
 ---
+### Techniker zuweisen
+
+Über eine parametrisierte RAP Action kann ein Techniker ausgewählt und dem Service Request zugewiesen werden.
+
+![Assign Technician](docs/screenshots/assign-technician.JPG)
 
 ## Überblick
 
